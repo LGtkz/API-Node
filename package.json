@@ -2,14 +2,14 @@
   "name": "api",
   "version": "1.0.0",
   "type": "module",
-  "main": "Server.js",
+  "main": "index.js",
   "engines": {
     "node": "18"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Server.js",
-    "dev": "nodemon Server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
