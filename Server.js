@@ -2,10 +2,13 @@ import express, { request } from 'express';
 import { PrismaClient } from '@prisma/client';
 import cors from 'cors';
 
+
 const app = express();
 const prisma = new PrismaClient()
 app.use(express.json())
 app.use(cors())
+
+const port = process.env.PORT
 app.post('/users', async (req, res) => {
     await prisma.user.create({
         data: {
@@ -60,7 +63,7 @@ app.delete('/users/:id', async (req, res) => {
 
 
 
-app.listen(3000);
+app.listen(port);
 
 // Ususario: leonardo
 // Senha: JEYkmvzmCbR1VkF4
